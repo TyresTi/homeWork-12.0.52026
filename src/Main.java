@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Задача №1
+        System.out.println("// Задача №1");
         int clientOS = 1;
         if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
@@ -10,6 +11,7 @@ public class Main {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
         // Задача №2
+        System.out.println("// Задача №2");
         int clientOS1 = 0;
         int clientDeviceYear = 2011;
         if (clientOS1 == 1 && clientDeviceYear < 2015) {
@@ -22,6 +24,7 @@ public class Main {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
         // Задача №3
+        System.out.println("// Задача №3");
         int year = 2004;
         if (year <= 1584) {
             System.out.println("Год должен быть больше 1584");
@@ -31,18 +34,22 @@ public class Main {
             System.out.println(year + " год не является високосным.");
         }
         // Задача №4
-        int deliveryDistance = 1;
+        System.out.println("// Задача №4");
+        int deliveryDistance = 199;
         int deleveryTime20 = 1;
         int deleveryTime60 = 2;
         int deleveryTime100 = 3;
-        if (deliveryDistance <= 20)
+        if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: " + deleveryTime20);
-        else if (deliveryDistance <= 60) {
+        } else if (deliveryDistance <= 60) {
             System.out.println("Потребуется дней: " + deleveryTime60);
-        } else if (deliveryDistance <= 100)
+        } else if (deliveryDistance <= 100) {
             System.out.println("Потребуется дней: " + deleveryTime100);
-        else if (deliveryDistance > 100) System.out.println("Доставки нет");
+        } else {
+            System.out.println("Доставки нет");
+        }
         // Задача №5
+        System.out.println("// Задача №5");
         int monthNumber = 2;
         switch (monthNumber) {
             case 1:
@@ -84,7 +91,6 @@ public class Main {
             default:
                 System.out.println("Такого месяца не существует");
         }
-
     }
 }
 
