@@ -36,15 +36,15 @@ public class Main {
         // Задача №4
         System.out.println("// Задача №4");
         int deliveryDistance = 199;
-        int deleveryTime20 = 1;
-        int deleveryTime60 = 2;
-        int deleveryTime100 = 3;
+        int deliveryTime20 = 1;
+        int deliveryTime60 = 2;
+        int deliveryTime100 = 3;
         if (deliveryDistance <= 20) {
-            System.out.println("Потребуется дней: " + deleveryTime20);
+            System.out.println("Потребуется дней: " + deliveryTime20);
         } else if (deliveryDistance <= 60) {
-            System.out.println("Потребуется дней: " + deleveryTime60);
+            System.out.println("Потребуется дней: " + deliveryTime60);
         } else if (deliveryDistance <= 100) {
-            System.out.println("Потребуется дней: " + deleveryTime100);
+            System.out.println("Потребуется дней: " + deliveryTime100);
         } else {
             System.out.println("Доставки нет");
         }
