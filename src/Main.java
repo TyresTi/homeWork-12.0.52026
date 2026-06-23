@@ -1,79 +1,95 @@
 
 public class Main {
     public static void main(String[] args) {
+
         // Задача №1
-        byte age = 33;
-        if (age >= 18) {
-            System.out.println("Если возраст человека равен " + age + " то он совершеннолетний.");
+        int clientOS = 1;
+        if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         } else {
-            System.out.println("Если возраст человека равен " + age + " то он не достиг совершеннолетия, нужно немного подождать.");
+            System.out.println("Установите версию приложения для iOS по ссылке");
         }
         // Задача №2
-        byte temp = 6;
-        if (temp <= 5) {
-            System.out.println("На улице " + temp + " градусов, нужно надеть шапку.");
+        int clientOS1 = 0;
+        int clientDeviceYear = 2011;
+        if (clientOS1 == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOS1 == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (clientOS1 == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         } else {
-            System.out.println("На улице " + temp + " градусов, можно идти без шапки.");
+            System.out.println("Установите версию приложения для iOS по ссылке");
         }
         // Задача №3
-        short speed = 59;
-        if (speed > 60) {
-            System.out.println("Если скорость " + speed + " то придется заплатить штраф.");
+        int year = 2004;
+        if (year <= 1584) {
+            System.out.println("Год должен быть больше 1584");
+        } else if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
         } else {
-            System.out.println("Если скорость " + speed + " можно ездить спокойно.");
+            System.out.println(year + " год не является високосным.");
         }
         // Задача №4
-        byte age1 = 25;
-        if (age1 >= 2 && age1 <= 6) {
-            System.out.println("Если возраст человека равен " + age1 + " то ему нужно ходить в детский сад.");
+        int deliveryDistance = 1;
+        int deleveryTime20 = 1;
+        int deleveryTime60 = 2;
+        int deleveryTime100 = 3;
+        if (deliveryDistance <= 20)
+            System.out.println("Потребуется дней: " + deleveryTime20);
+        else if (deliveryDistance <= 60) {
+            System.out.println("Потребуется дней: " + deleveryTime60);
+        } else if (deliveryDistance <= 100)
+            System.out.println("Потребуется дней: " + deleveryTime100);
+        else if (deliveryDistance > 100) System.out.println("Доставки нет");
+        // Задача №5
+        int monthNumber = 2;
+        switch (monthNumber) {
+            case 1:
+                System.out.println("1-й месяц (он же январь) принадлежит к сезону зима.");
+                break;
+            case 2:
+                System.out.println("2-й месяц (он же февраль) принадлежит к сезону зима.");
+                break;
+            case 3:
+                System.out.println("3-й месяц (он же март) принадлежит к сезону весна.");
+                break;
+            case 4:
+                System.out.println("4-й месяц (он же апрель) принадлежит к сезону весна.");
+                break;
+            case 5:
+                System.out.println("5-й месяц (он же май) принадлежит к сезону весна.");
+                break;
+            case 6:
+                System.out.println("6-й месяц (он же июнь) принадлежит к сезону лето.");
+                break;
+            case 7:
+                System.out.println("7-й месяц (он же июль) принадлежит к сезону лето.");
+                break;
+            case 8:
+                System.out.println("8-й месяц (он же август) принадлежит к сезону лето.");
+                break;
+            case 9:
+                System.out.println("9-й месяц (он же сентябрь) принадлежит к сезону осень.");
+                break;
+            case 10:
+                System.out.println("10-й месяц (он же октябрь) принадлежит к сезону осень.");
+                break;
+            case 11:
+                System.out.println("11-й месяц (он же ноябрь) принадлежит к сезону осень.");
+                break;
+            case 12:
+                System.out.println("12-й месяц (он же декабрь) принадлежит к сезону зима.");
+                break;
+            default:
+                System.out.println("Такого месяца не существует");
         }
-        if (age1 >= 7 && age1 <= 17) {
-            System.out.println("Если возраст человека равен " + age1 + " то ему нужно ходить в школу.");
-        }
-        if (age1 >= 18 && age1 <= 24) {
-            System.out.println("Если возраст человека равен " + age1 + " то ему нужно ходить в университет.");
-        }
-        if (age1 > 24) {
-            System.out.println("Если возраст человека равен " + age1 + " то ему нужно ходить на работу.");
-        }
-// Задача №5
-        byte age2 = 15;
-        if (age2 < 5) {
-            System.out.println("Если возраст ребенка равен " + age2 + " то ему нельзя кататься на аттракционе.");
-        }
-        if (age2 >= 5 && age2 <= 14) {
-            System.out.println("Если возраст ребенка равен " + age2 + " то он может кататься только в сопровождении взрослого.");
-        }
-        if (age2 > 14) {
-            System.out.println("Если возраст ребенка равен " + age2 + " то он может кататься без сопровождения взрослого.");
-        }
-// Задача №6
-        int peopleInTheCarriage = 103;
-        int seat = 60 - peopleInTheCarriage;
-        int stand = 102 - peopleInTheCarriage;
-        if (peopleInTheCarriage == 0) {
-            System.out.println("Сейчас в вагоне  " + peopleInTheCarriage + " человек. Вагон полностью пустой.");
-        }
-        if (peopleInTheCarriage < 60 && seat < 60) {
-            System.out.println("Сейчас в вагоне  " + peopleInTheCarriage + " человек. Свободно сидячих мест - " + seat + ". Свободно стоячих мест - 42.");
-        }
-        if (peopleInTheCarriage >= 60 && peopleInTheCarriage < 102) {
-            System.out.println("Сейчас в вагоне  " + peopleInTheCarriage + " человек. Свободно сидячих мест - 0. Свободно стоячих мест - " + stand);
-        }
-        if (peopleInTheCarriage >= 102) {
-            System.out.println("Сейчас в вагоне  " + peopleInTheCarriage + " человека. Вагон уже полностью забит.");
-        }
-        // Задача №7
-        int one = 55533222;
-        int two = 44424422;
-        int three = 33322222;
-        if (one > two && one > three) {
-            System.out.println("Самое большое число: " + one + ".");
-        } else if (two > one && two > three) {
-            System.out.println("Самое большое число: " + two + ".");
-        } else {
-            System.out.println("Самое большое число: " + three + ".");
-        }
+
     }
 }
+
+
+
+
+
 
